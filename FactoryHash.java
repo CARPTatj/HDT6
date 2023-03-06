@@ -14,6 +14,11 @@ import java.util.TreeMap;
 public class FactoryHash {
     private Map<String, ArrayList<String>> soyElMapa;
 
+    
+    /** 
+     * @param estilo
+     * @return Map<String, ArrayList<String>>
+     */
     public Map<String, ArrayList<String>> getInstance(int estilo){
         switch(estilo){
             case 1:

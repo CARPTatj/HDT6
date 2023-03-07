@@ -17,6 +17,12 @@ public class controladora {
     private Map<String, ArrayList<String>> canasta;
     private FactoryHash factoria;
 
+
+    public controladora(int tipo) {
+        this.bodega = factoria.getInstance(tipo);
+        this.canasta = factoria.getInstance(tipo);
+        this.factoria = new FactoryHash();
+    }
     
     /** 
      * @param inventario
@@ -74,7 +80,7 @@ public class controladora {
     /** 
      * @return String
      */
-    public String mostrarDatos(){
+    public StringBuilder mostrarDatos(){
         StringBuilder estado = new StringBuilder();
         ArrayList<String> MuestradeProducts = new ArrayList<String>();
 
@@ -88,7 +94,7 @@ public class controladora {
             }
         }
 
-        return estado.toString();
+        return estado;
 
     }
 
@@ -96,7 +102,7 @@ public class controladora {
     /** 
      * @return String
      */
-    public String mostrarDatosPorTipo(){
+    public StringBuilder mostrarDatosPorTipo(){
         StringBuilder estado = new StringBuilder();
         
         for (Map.Entry<String, ArrayList<String>> adentro : canasta.entrySet()){
@@ -111,7 +117,7 @@ public class controladora {
             }
             
         }
-        return estado.toString();
+        return estado;
 
     }
 
@@ -119,7 +125,7 @@ public class controladora {
     /** 
      * @return String
      */
-    public String mostrarInventario(){
+    public StringBuilder mostrarInventario(){
         StringBuilder estado = new StringBuilder();
         ArrayList<String> MuestradeProductos = new ArrayList<String>();
 
@@ -138,7 +144,7 @@ public class controladora {
             }
         }
 
-        return estado.toString();
+        return estado;
 
     }
 
@@ -146,7 +152,7 @@ public class controladora {
     /** 
      * @return String
      */
-    public String mostrarInventarioPorTipo(){
+    public StringBuilder mostrarInventarioPorTipo(){
         StringBuilder estado = new StringBuilder();
         for (Map.Entry<String, ArrayList<String>> adentro : bodega.entrySet()) {
             estado.append("\n\n").append(adentro.getKey().toUpperCase()).append("\n\n");
@@ -161,7 +167,7 @@ public class controladora {
             }
         }
     
-        return estado.toString();
+        return estado;
     }
 
     //Sets y gets

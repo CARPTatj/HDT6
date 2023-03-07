@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
 /*
  * Alina Carías (22539)
  * Algoritmos y Estructuras de Datos Sección 40
@@ -5,11 +10,6 @@
  * 03-03-2023
  * Clase FactoryHash: es la clase factory
  */
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.TreeMap;
 
 public class FactoryHash {
     private Map<String, ArrayList<String>> soyElMapa;

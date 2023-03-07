@@ -23,6 +23,8 @@ public class controladora {
         this.canasta = factoria.getInstance(tipo);
         this.factoria = new FactoryHash();
     }
+
+
     
     /** 
      * @param inventario

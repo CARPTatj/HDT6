@@ -1,3 +1,9 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.FileWriter;
  /*
  * Alina Carías (22539)
  * Algoritmos y Estructuras de Datos Sección 40
@@ -5,12 +11,6 @@
  * 03-03-2023
  * Clase Archivo: lee los archivos
  */
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.io.FileWriter;
 
 public class Archivo {
     
